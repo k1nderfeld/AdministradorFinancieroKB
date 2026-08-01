@@ -1,4 +1,4 @@
 <h1 style=
-    align:"center">
+    align="center">
   Administrador Financiero K&B
 </h1>
