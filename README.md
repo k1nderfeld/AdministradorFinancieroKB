@@ -1,5 +1,5 @@
 <h1 align = "center">
-  Administrador Financiero K&B
+  💸 Administrador Financiero K&B 💸
 </h1>
 
 <p align = "center"> 
