@@ -213,12 +213,13 @@ importers:
       express:
         specifier: ^5.2.1
         version: 5.2.1(supports-color@5.5.0)
-      nodemon:
-        specifier: ^3.1.14
-        version: 3.1.14
       pg:
         specifier: ^8.22.0
         version: 8.22.0
+    devDependencies:
+      nodemon:
+        specifier: ^3.1.14
+        version: 3.1.14
 
 packages:
 
