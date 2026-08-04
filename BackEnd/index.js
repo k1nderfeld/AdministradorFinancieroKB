@@ -1,18 +1,14 @@
-// importe librerias
-import express from "express";
-import cors from "cors";
-import { Client } from "pg";
+import app from "./src/app.js";
+import dotenv from "dotenv";
+import pool from "./src/config/database.js";
 
-//instacia aplicacion
-const app = express();
+dotenv.config();
 
-// Middlewares
-// intermediario frontend(React) con backend
-app.use(cors());
-// traductor JSON dentro de las peticiones
-app.use(express.json());
+const result = pool.query();
+
+console.log(result);
 
 // ruta de prueba
 app.listen(3000, () => {
     console.log("Iniciando servidor en el puerto 3000!");
-})
+});
