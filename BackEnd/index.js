@@ -2,13 +2,19 @@ import app from "./src/app.js";
 import dotenv from "dotenv";
 import pool from "./src/config/database.js";
 
-dotenv.config();
+const PORT = process.env.PORT || 3000;
 
-const result = pool.query();
+try{
+    const result = await pool.query("SELECT NOW()");
 
-console.log(result);
+    console.log("Base de datos conectada!");
+    console.log(result.rows[0]);
 
-// ruta de prueba
-app.listen(3000, () => {
-    console.log("Iniciando servidor en el puerto 3000!");
-});
+    app.listen(PORT, () => {
+        console.log('Iniciando servidor en el puerto ${PORT}');
+    });
+} catch (error) {
+    console.error("Error al conectar con la base de datos:");
+    console.error(error.message);
+    process.exit(1);
+}
