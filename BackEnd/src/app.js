@@ -14,6 +14,6 @@ app.use(cors());
 // traductor JSON dentro de las peticiones
 app.use(express.json());
 
-app.use()
+app.use("/api/health", healthRoutes);
 
 export default app;
