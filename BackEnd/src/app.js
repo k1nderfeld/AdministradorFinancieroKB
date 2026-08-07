@@ -3,6 +3,8 @@ import express from "express";
 import cors from "cors";
 import { Client } from "pg";
 
+import healthRoutes from "./routes/healthRoutes.js";
+
 //instacia aplicacion
 const app = express();
 
@@ -11,5 +13,7 @@ const app = express();
 app.use(cors());
 // traductor JSON dentro de las peticiones
 app.use(express.json());
+
+app.use()
 
 export default app;
