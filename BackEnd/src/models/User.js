@@ -1,12 +1,13 @@
 export class User {
     constructor ({
-        id, 
+        id = null, 
         rut, 
         name, 
         lastName, 
         phoneNumber, 
         email, 
-        password
+        password,
+        profilePicture = null
     }) {
         this.id = id;
         this.rut = rut;
@@ -15,5 +16,6 @@ export class User {
         this.phoneNumber = phoneNumber;
         this.email = email;
         this.password = password;
+        this.profilePicture = profilePicture;
     }
 }
