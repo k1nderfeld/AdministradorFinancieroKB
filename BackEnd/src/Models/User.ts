@@ -5,7 +5,8 @@ export default class User {
     rut : string;
     name : string;
     lastName : string;
-    phoneNumber : number;
+    birthDate : Date;
+    phoneNumber : string;
     email : string;
     password : string;
     profilePicture? : string;
@@ -15,6 +16,7 @@ export default class User {
         rut,
         name,
         lastName,
+        birthDate,
         phoneNumber,
         email,
         password,
@@ -27,6 +29,7 @@ export default class User {
         this.rut = rut;
         this.name = name;
         this.lastName = lastName;
+        this.birthDate = birthDate;
         this.phoneNumber = phoneNumber;
         this.email = email;
         this.password = password;

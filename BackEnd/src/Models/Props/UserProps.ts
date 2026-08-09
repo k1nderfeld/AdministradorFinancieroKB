@@ -3,7 +3,8 @@ export interface UserProps {
     rut : string,
     name : string,
     lastName : string,
-    phoneNumber : number,
+    birthDate : Date,
+    phoneNumber : string,
     email : string,
     password : string,
     profilePicture? : string
