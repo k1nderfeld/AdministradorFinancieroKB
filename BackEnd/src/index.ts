@@ -1,7 +1,7 @@
 import "dotenv/config";
 
-import app from "./src/app.js";
-import pool from "./src/config/database.js";
+import app from "./app.js";
+import pool from "./Config/database.js";
 
 const PORT = process.env.PORT || 3000;
 
@@ -16,6 +16,10 @@ try{
     });
 } catch (error) {
     console.error("Error al conectar con la base de datos:");
-    console.error(error.message);
+    console.error(error instanceof Error
+                    ? error.message
+                    : "Error desconocido"
+    );
+
     process.exit(1);
 }

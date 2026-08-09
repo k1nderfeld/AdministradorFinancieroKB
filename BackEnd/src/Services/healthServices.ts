@@ -1,4 +1,4 @@
-import pool from "../config/database.js";
+import pool from "../Config/database.js";
 
 export async function checkHealth(){
     const result = await pool.query("SELECT NOW()");
