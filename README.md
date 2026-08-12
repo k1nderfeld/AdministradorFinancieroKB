@@ -6,4 +6,5 @@
   <img src="https://img.shields.io/badge/pnpm-10-f69220?style=flat-square&logo=pnpm&logoColor=white" alt="pnpm 10" />
   <img src="https://img.shields.io/badge/Typescript-7.0.2-blue" alt="Typescript version" />
   <img src="https://img.shields.io/badge/Node.js-6DA55F?logo=node.js&logoColor=white" alt="Node.js" />
+  <img src="https://img.shields.io/badge/React-%2320232a.svg?logo=react&logoColor=%2361DAFB" alt="React" />
 </p>
