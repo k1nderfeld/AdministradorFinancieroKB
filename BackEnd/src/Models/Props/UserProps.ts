@@ -1,5 +1,6 @@
 export interface UserProps {
     id? : number,
+    status : boolean,
     rut : string,
     name : string,
     lastName : string,

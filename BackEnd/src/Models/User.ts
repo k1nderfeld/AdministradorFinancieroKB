@@ -3,6 +3,7 @@ import type { UserProps } from "./Props/UserProps.js";
 export default class User {
     id? : number;
     rut : string;
+    status : boolean;
     name : string;
     lastName : string;
     birthDate : Date;
@@ -14,6 +15,7 @@ export default class User {
     constructor ({
         id,
         rut,
+        status,
         name,
         lastName,
         birthDate,
@@ -27,6 +29,7 @@ export default class User {
         }
 
         this.rut = rut;
+        this.status = status;
         this.name = name;
         this.lastName = lastName;
         this.birthDate = birthDate;
