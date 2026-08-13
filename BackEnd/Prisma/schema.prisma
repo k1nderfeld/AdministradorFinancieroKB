@@ -13,24 +13,14 @@ datasource db {
 }
 
 model User {
-    id             int @id @default(autoincrement())
+    id             Int @id @default(autoincrement())
     rut            String @unique
-    status         boolean
+    status         Boolean
     name           String
     lastName       String
     birthDate      String
     phoneNumber    String
-    email          String
+    email          String @unique
     password       String
     profilePicture String?
-}
-
-model Card {
-    id?            int @id @default(autoincrement())
-    cardNumber     int
-    holderName     String
-    expirationDate String
-    brand          String
-    cardType       String
-    balance        int
 }
