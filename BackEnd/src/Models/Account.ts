@@ -1,5 +1,5 @@
-import Card from "../src/Models/Card.js";
-import AccountProps from "../src/Models/Props/AccountProps.js";
+import Card from "./Card.js";
+import AccountProps from "./Props/AccountProps.js";
 
 export default class Account {
     id? : number;
@@ -13,10 +13,11 @@ export default class Account {
     type,
     wallet
   } : AccountProps) {
-    if (id !=== undefined) {
+    if (id !== undefined) {
       this.id = id;
     }
     this.name = name;
     this.type = type;
     this.wallet = wallet;
+    }
 }

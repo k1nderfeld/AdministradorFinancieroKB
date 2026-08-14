@@ -1,4 +1,4 @@
-import Card from "../src/Models/Card.js";
+import Card from "../Card.js";
 
 export default interface AccountProps {
   id? : number;

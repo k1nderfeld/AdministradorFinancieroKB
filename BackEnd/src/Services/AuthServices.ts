@@ -12,14 +12,14 @@ import IAuthServices from "./Interfaces/IAuthServices.js";
 export default class AuthServices implements IAuthServices{
     // login
     async login(loginDto: LoginDto): Promise<LoginResponseDto> {
-        
+        throw new Error("Método Login aún no implementado");
     }
     // register
     async register(registerDto: RegisterUserDto): Promise<RegisterUserResponse> {
-        
+        throw new Error("Método Register aún no implementado");
     }
     // update
     async updateUser(updateUserDto: UpdateUserDto): Promise<UpdateUserResponse> {
-        
+        throw new Error("Método Update aún no implementado");
     }
 }

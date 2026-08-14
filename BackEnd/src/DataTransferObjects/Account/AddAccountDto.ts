@@ -1,8 +1,8 @@
-import Account from "../src/Models/Account.js";
+import Card from "../../Models/Card.js";
 
 export default interface AddAccountDto {
   id? : number;
   name : string;
   type : string;
-  wallet :
+  wallet : Card[];
 }
