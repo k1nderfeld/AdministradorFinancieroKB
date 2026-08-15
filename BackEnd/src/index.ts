@@ -1,7 +1,7 @@
 import "dotenv/config";
 
 import app from "./app.js";
-import pool from "./Config/database.js";
+import pool from "./Config/prisma.js";
 
 const PORT = process.env.PORT || 3000;
 
