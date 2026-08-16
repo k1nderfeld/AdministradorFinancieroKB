@@ -1,11 +1,10 @@
-import pool from "../Config/prisma.js";
+import prisma from "../Config/prisma.js";
 
 export async function checkHealth(){
-    const result = await pool.query("SELECT NOW()");
+    const result = await prisma.$queryRaw`SELECT 1`;
 
     return {
         status: "OK",
-        database: "Conectada",
-        serverTime: result.rows[0].now
+        database: "Conectada"
     };
 }

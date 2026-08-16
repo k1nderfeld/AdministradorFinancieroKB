@@ -1,15 +1,13 @@
 import "dotenv/config";
-
 import app from "./app.js";
-import pool from "./Config/prisma.js";
+import prisma from "./Config/prisma.js";
 
 const PORT = process.env.PORT || 3000;
 
 try{
-    const result = await pool.query("SELECT NOW()");
+    const result = await prisma.$queryRaw`SELECT 1`;
 
     console.log("Base de datos conectada!");
-    console.log(result.rows[0]);
 
     app.listen(PORT, () => {
         console.log(`Iniciando servidor en el puerto ${PORT}`);

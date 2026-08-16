@@ -1,7 +1,6 @@
 // importe librerias
 import express from "express";
 import cors from "cors";
-import { Client } from "pg";
 
 import healthRoutes from "./Routes/HealthRoutes.js";
 
