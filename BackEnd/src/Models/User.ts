@@ -10,7 +10,7 @@ export default class User {
     phoneNumber : string;
     email : string;
     password : string;
-    profilePicture? : string;
+    profilePicture : string | null;
 
     constructor ({
         id,
@@ -36,9 +36,6 @@ export default class User {
         this.phoneNumber = phoneNumber;
         this.email = email;
         this.password = password;
-        
-        if (profilePicture !== undefined){
-            this.profilePicture = profilePicture;
-        }
+        this.profilePicture = profilePicture;
     }
 }

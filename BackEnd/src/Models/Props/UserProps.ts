@@ -8,5 +8,5 @@ export interface UserProps {
     phoneNumber : string,
     email : string,
     password : string,
-    profilePicture? : string
+    profilePicture : string | null
 }
