@@ -57,7 +57,7 @@ export default class AuthServices implements IAuthServices {
             await this._userRepository.create(newUser);
 
             return this.#HandleRegister(201, "Usuario registrado exitosamente");
-            
+                
         } catch (error){
             return this.#HandleRegister(500, "Error interno al registrar usuario");
         }
