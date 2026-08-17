@@ -1,4 +1,4 @@
 export default interface RegisterUserResponse {
-    response : boolean,
+    code : number,
     message : string
 }

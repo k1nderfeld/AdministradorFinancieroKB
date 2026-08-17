@@ -9,9 +9,9 @@ import type UpdateUserResponse from "../../DataTransferObjects/User/userDtos/Upd
 
 export default interface IAuthServices {
     // Servicio Inicio de sesión
-    login(loginDto : LoginDto): Promise<LoginResponseDto>;
+    Login(loginDto : LoginDto): Promise<LoginResponseDto>;
     // Servicio Registro
-    register(registerDto : RegisterUserDto): Promise<RegisterUserResponse>;
+    Register(registerDto : RegisterUserDto): Promise<RegisterUserResponse>;
     // Servicio actualización de datos personales
-    updateUser(updateUserDto : UpdateUserDto): Promise<UpdateUserResponse>;
+    UpdateUser(updateUserDto : UpdateUserDto): Promise<UpdateUserResponse>;
 }

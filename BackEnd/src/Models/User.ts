@@ -3,7 +3,7 @@ import type { UserProps } from "./Props/UserProps.js";
 export default class User {
     id? : number;
     rut : string;
-    status : boolean;
+    status? : boolean;
     name : string;
     lastName : string;
     birthDate : Date;
@@ -29,7 +29,7 @@ export default class User {
         }
 
         this.rut = rut;
-        this.status = status;
+        this.status = status ?? false;
         this.name = name;
         this.lastName = lastName;
         this.birthDate = birthDate;
