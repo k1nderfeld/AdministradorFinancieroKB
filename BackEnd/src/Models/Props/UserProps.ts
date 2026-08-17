@@ -7,6 +7,6 @@ export interface UserProps {
     birthDate : Date,
     phoneNumber : string,
     email : string,
-    password : string,
+    password : string | null,
     profilePicture : string | null
 }
