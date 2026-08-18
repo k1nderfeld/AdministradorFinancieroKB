@@ -35,7 +35,7 @@ export default class AuthServices implements IAuthServices {
             if (!ValidateEmail.IsValidEmail(registerDto.email)) return this.#HandleRegister(400, "El correo electrónico ingresado no es válido");
             // Definimos un usuario para obtener sus datos y validar
             let user: User | null;
-            user = await this._userRepository.findByRut(registerDto.rut);
+            user = await this._userRepository.findByRut(ValidateRut.NormalizeRut(registerDto.rut));
             // Validamos si ya existe un usuario registrado con el rut 
             if (user) return this.#HandleRegister(409, "El RUT ingresado ya se encuentra registrado en el sistema");
 
@@ -47,7 +47,7 @@ export default class AuthServices implements IAuthServices {
                 rut: ValidateRut.NormalizeRut(registerDto.rut),
                 name: registerDto.name.trim(),
                 lastName: registerDto.lastName.trim(),
-                birthDate: registerDto.birthDate,
+                birthDate: new Date(registerDto.birthDate),
                 phoneNumber: registerDto.phoneNumber.trim(),
                 email: registerDto.email.trim().toLowerCase(),
                 password: null,
