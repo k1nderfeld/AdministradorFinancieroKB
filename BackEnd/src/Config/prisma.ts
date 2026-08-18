@@ -5,7 +5,7 @@ import { PrismaClient } from "../generated/prisma/client.js";
 const connectionString = process.env.DATABASE_URL;
 
 if (!connectionString) {
-    throw new Error("DATABASE_URL no está difinida");
+    throw new Error("DATABASE_URL no está definida");
 }
 
 const adapter = new PrismaPg({

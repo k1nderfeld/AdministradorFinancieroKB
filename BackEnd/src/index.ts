@@ -10,7 +10,7 @@ try{
     console.log("Base de datos conectada!");
 
     app.listen(PORT, () => {
-        console.log(`Iniciando servidor en el puerto ${PORT}`);
+        console.log(`Servidor iniciado en: http://localhost:${PORT}`);
     });
 } catch (error) {
     console.error("Error al conectar con la base de datos:");
