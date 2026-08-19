@@ -1,5 +1,5 @@
 import type { Request, Response } from "express"; 
-import type RegisterUserDto from "../DataTransferObjects/User/userDtos/RegisterUserDto.js";
+import type RegisterUserDto from "../DataTransferObjects/User/authDtos/RegisterUserDto.js";
 import IAuthServices from "../Services/Interfaces/IAuthServices.js";
 
 export default class AuthController {

@@ -1,14 +1,13 @@
 import type LoginDto from "../DataTransferObjects/User/authDtos/LoginDto.js";
 import type LoginResponseDto from "../DataTransferObjects/User/authDtos/LoginResponseDto.js";
 
-import type RegisterUserDto from "../DataTransferObjects/User/userDtos/RegisterUserDto.js";
-import type RegisterUserResponse from "../DataTransferObjects/User/userDtos/RegisterUserResponse.js";
+import type RegisterUserDto from "../DataTransferObjects/User/authDtos/RegisterUserDto.js";
+import type RegisterUserResponse from "../DataTransferObjects/User/authDtos/RegisterUserResponse.js";
 
 import type UpdateUserDto from "../DataTransferObjects/User/userDtos/UpdateUserDto.js";
 import type UpdateUserResponse from "../DataTransferObjects/User/userDtos/UpdateUserResponse.js";
 
 import IAuthServices from "./Interfaces/IAuthServices.js";
-import UserRepository from "../Repository/UserRepository.js";
 import User from "../Models/User.js";
 import ValidateRut from "../Utils/ValidateRut.js";
 import IUserRepository from "../Repository/Interfaces/IUserRepository.js";

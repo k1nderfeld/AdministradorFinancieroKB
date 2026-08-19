@@ -1,5 +1,4 @@
 import IUserRepository from "./Interfaces/IUserRepository.js";
-import RegisterUserDto from "../DataTransferObjects/User/userDtos/RegisterUserDto.js";
 import User from "../Models/User.js";
 import prisma from "../Config/prisma.js";
 
