@@ -5,7 +5,11 @@ export default function App() {
   return (
     <>
       <Toaster />
-      <AuthRoutes />
+      <main className="page"> 
+        <section className="global-container">
+          <AuthRoutes />
+        </section>
+      </main>  
     </>
   );
 }

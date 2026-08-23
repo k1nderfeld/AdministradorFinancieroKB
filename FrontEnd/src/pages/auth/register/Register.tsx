@@ -1,15 +1,16 @@
-import toast from "react-hot-toast";
-import Input from "../../components/ui/input.js";
+import "./Register.css"
+import { toast } from "sonner";
+import Input from "../../../components/ui/input.js";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import handleRegister from "../../services/User/registerService.js";
-import handleApiError from "../../utils/handleApiError.js";
-import type { RegisterUserRequest } from "../../interfaces/Auth/register.js";
-import Button from "../../components/ui/button.js";
+import handleRegister from "../../../services/User/registerService.js";
+import handleApiError from "../../../utils/handleApiError.js";
+import type { RegisterUserRequest } from "../../../interfaces/Auth/register.js";
+import Button from "../../../components/ui/button.js";
 
 export default function Register() {
     // método de navegación entre páginas
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
     
     const [form, setForm] = useState<RegisterUserRequest>({
         rut: "",
@@ -50,13 +51,13 @@ export default function Register() {
     } 
 
     return (
-        <main>
-            <section>
-                <h1>
-                    Create Account
-                </h1>
-                {/* Form */} 
-                <form onSubmit={handleSubmit}>
+        <section className="register">
+            <h1>
+                Create Account
+            </h1>
+            {/* Form */} 
+            <form className="register-form" onSubmit={handleSubmit}>
+                <div className="register-inputs">
                     <Input
                         type="text"
                         name="name"
@@ -115,9 +116,16 @@ export default function Register() {
                         type="submit"
                         text={loading ? "Creating account..." : "Sign Up"}
                         disabled={loading}
-                   />
-                </form>
-            </section>
-        </main>
+                    />
+                </div>
+            </form>
+
+            <p>
+                ¿Already have an account?
+                <span className="toLogin" onClick={() => navigate("/")}>
+                    Log in
+                </span>
+            </p>
+        </section>
     );
 }

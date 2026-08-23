@@ -1,0 +1,24 @@
+.register {
+  display: flex; /* Se permite el posicionamiento de los hijos */
+  flex-direction: column; /* Se colocan los elementos uno debajo del otro */
+  align-items: center; /* Se centran los elementos */
+}
+
+.register-form {
+  width: 100%;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.register-inputs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.toLogin {
+    cursor: pointer; /* Permite que sea clickeable */
+    color: #5fc7cb;
+}
