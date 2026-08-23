@@ -29,18 +29,18 @@ export default class AuthServices implements IAuthServices {
     async Register(registerDto: RegisterUserDto): Promise<RegisterUserResponse> {
         try {
             // Validamos si el RUT recibido esta en formato válido
-            if (!ValidateRut.IsValidRut(registerDto.rut)) return this.#HandleRegister(400, "El RUT ingresado no es válido");
+            if (!ValidateRut.IsValidRut(registerDto.rut)) return this.#HandleRegister(400, "The entered RUT is invalid");
             // Validamos si el correo recibido esta en formato válido
-            if (!ValidateEmail.IsValidEmail(registerDto.email)) return this.#HandleRegister(400, "El correo electrónico ingresado no es válido");
+            if (!ValidateEmail.IsValidEmail(registerDto.email)) return this.#HandleRegister(400, "The entered email address is invalid");
             // Definimos un usuario para obtener sus datos y validar
             let user: User | null;
             user = await this._userRepository.findByRut(ValidateRut.NormalizeRut(registerDto.rut));
             // Validamos si ya existe un usuario registrado con el rut 
-            if (user) return this.#HandleRegister(409, "El RUT ingresado ya se encuentra registrado en el sistema");
+            if (user) return this.#HandleRegister(409, "This RUT is already registered");
 
             user = await this._userRepository.findByEmail(registerDto.email);
             // Validamos si ya existe un usuario registrado con el email 
-            if (user) return this.#HandleRegister(409, "El correo electrónico ingresado ya se encuentra registrado en el sistema");
+            if (user) return this.#HandleRegister(409, "This email address is already registered");
 
             const newUser = new User({
                 rut: ValidateRut.NormalizeRut(registerDto.rut),
@@ -55,10 +55,10 @@ export default class AuthServices implements IAuthServices {
 
             await this._userRepository.create(newUser);
 
-            return this.#HandleRegister(201, "Usuario registrado exitosamente");
+            return this.#HandleRegister(201, "User registered successfully");
                 
         } catch (error){
-            return this.#HandleRegister(500, "Error interno al registrar usuario");
+            return this.#HandleRegister(500, "An internal error occurred while registering the user");
         }
     }
     // Update
