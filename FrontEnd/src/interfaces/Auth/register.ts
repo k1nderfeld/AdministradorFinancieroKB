@@ -2,7 +2,7 @@ export interface RegisterUserRequest {
     rut: string;
     name: string;
     lastName: string;
-    birthDate: Date;
+    birthDate: string;
     phoneNumber: string;
     email: string;
 }
