@@ -1,12 +1,13 @@
 import "./Register.css"
 import { toast } from "sonner";
-import Input from "../../../components/ui/input.js";
+import registerIcons from "../../../assets/icons/register/registerIcons.js";
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import handleRegister from "../../../services/User/registerService.js";
 import handleApiError from "../../../utils/handleApiError.js";
 import type { RegisterUserRequest } from "../../../interfaces/Auth/register.js";
 import Button from "../../../components/ui/button.js";
+import Input from "../../../components/ui/input.js";
 
 export default function Register() {
     // método de navegación entre páginas
@@ -62,6 +63,13 @@ export default function Register() {
                         type="text"
                         name="name"
                         placeholder="Name"
+                        icon={
+                            <img 
+                                src={registerIcons.user} 
+                                alt=""
+                                className="input-icon-name"
+                            />
+                        }
                         value={form.name}
                         onChange={handleChange}
                         required
@@ -71,6 +79,13 @@ export default function Register() {
                         type="text"
                         name="lastName"
                         placeholder="Lastname"
+                        icon={
+                            <img 
+                                src={registerIcons.user} 
+                                alt=""
+                                className="input-icon-name"
+                            />
+                        }
                         value={form.lastName}
                         onChange={handleChange}
                         required
@@ -80,6 +95,13 @@ export default function Register() {
                         type="text"
                         name="rut"
                         placeholder="RUT"
+                        icon={
+                            <img 
+                                src={registerIcons.rut}
+                                alt=""
+                                className="input-icon-rut"
+                            />
+                        }
                         value={form.rut}
                         onChange={handleChange}
                         required
@@ -89,6 +111,13 @@ export default function Register() {
                         type="text"
                         name="email"
                         placeholder="Email"
+                        icon={
+                            <img
+                                src={registerIcons.email}
+                                alt=""
+                                className="input-icon-email"
+                            />
+                        }
                         value={form.email}
                         onChange={handleChange}
                         required
@@ -98,6 +127,13 @@ export default function Register() {
                         type="text"
                         name="phoneNumber"
                         placeholder="Phone Number"
+                        icon={
+                            <img
+                                src={registerIcons.phoneNumber}
+                                alt=""
+                                className="input-icon-phone"
+                            />
+                        }
                         value={form.phoneNumber}
                         onChange={handleChange}
                         required
@@ -107,24 +143,31 @@ export default function Register() {
                         type="text"
                         name="birthDate"
                         placeholder="Birth Date"
+                        icon={
+                            <img
+                                src={registerIcons.birthDate}
+                                alt=""
+                                className="input-icon-date"
+                            />
+                        }
                         value={form.birthDate}
                         onChange={handleChange}
                         required
                     />
-
+                </div>
                     <Button
                         type="submit"
+                        className="button"
                         text={loading ? "Creating account..." : "Sign Up"}
                         disabled={loading}
                     />
-                </div>
             </form>
 
             <p>
-                ¿Already have an account?
-                <span className="toLogin" onClick={() => navigate("/")}>
+                Already have an account?
+                <Link to="/login">
                     Log in
-                </span>
+                </Link>
             </p>
         </section>
     );

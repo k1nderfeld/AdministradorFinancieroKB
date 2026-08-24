@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import Icon from "./icon";
+import "./input.css"
 
 interface InputProps {
     type: string;
@@ -28,23 +29,28 @@ export default function Input ({
 } : InputProps) {
     return (
         <div
-            className={className}
+            className={`input-container ${className ?? ""}`}
         >
-            <Icon>
-                {icon}
-            </Icon>
+            {icon && (
+                <div className="input-icon-container">
+                    <Icon>
+                        {icon}
+                    </Icon>
+                </div>
+                    )
+            }
             {/* Se evalua si existe prefix para rederizarlo */}
             {prefix && <span>
                             {prefix}
                        </span>}
 
             <input
+                className="input-field"
                 onChange={onChange}
                 type={type}
                 name={name}
                 placeholder={placeholder}
                 value={value}
-                className={className}
                 onKeyDown={onKeyDown}
                 required={required}
             />

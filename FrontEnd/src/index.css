@@ -23,34 +23,62 @@ select {
 
 input {
   background-color: #d5fff8;
-  border-radius: 10px;
+  border-radius: 14px;
   border: 1px solid #9bd0d2;
   color: var(--text);
+  transition: border-color 0.2s ease;
 }
 
 input::placeholder {
   color: #9bd0d2;
 }
 
+input:focus { /* Al seleccionar el input */
+  border-color: #6faeb1;
+  outline: none; /* Borde */
+  box-shadow: 0 0 0 2px rgba(111, 174, 177, 0.15); /* Halo en input*/
+}
+
 button {
   color: white;
   background-color: #afe3e5;
-  border-radius: 10px;
+  border-radius: 14px;
   border: 1px solid #afe3e5;
 }
 
+a {
+  text-decoration: none;
+  color: #5fc7cb
+}
+
 .page {
-  min-height: 100vh;       /* ocupa al menos toda la pantalla */
-  display: flex;           /* activa Flexbox, permite posicionar los elementos hijos*/
+  min-height: 100vh; /* ocupa al menos toda la pantalla */
+  display: flex; /* activa Flexbox, permite posicionar los elementos hijos*/
   justify-content: center; /* centra horizontalmente */
-  align-items: center;     /* centra verticalmente */
+  align-items: center; /* centra verticalmente */
 }
 
 .global-container {
-  width: 90%;
+  width: 75%;
+  min-height: 80vh; /* Minimo altura 80% de la pantalla */
   margin: 40px auto;
-  padding: 32px;
   background-color: white;
   border-radius: 20px;
+  overflow: hidden; /* Los elementos dentro respetan los bordes */
   box-shadow: var(--shadow); /* Sombreado del contenedor */
+}
+
+.container-decoration {
+  width: 100%;
+  height: 200px;
+  /* Degradado hacia abajo */
+  background: linear-gradient(
+    to bottom,
+    #94b9ff,
+    #cdffd8
+  );
+}
+
+.global-content {
+  padding: 30px;
 }

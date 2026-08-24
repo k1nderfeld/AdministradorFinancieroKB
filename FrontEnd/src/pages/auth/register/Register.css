@@ -1,4 +1,5 @@
 .register {
+  margin-top: 200px;
   display: flex; /* Se permite el posicionamiento de los hijos */
   flex-direction: column; /* Se colocan los elementos uno debajo del otro */
   align-items: center; /* Se centran los elementos */
@@ -9,16 +10,45 @@
   max-width: 450px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
 }
 
 .register-inputs {
+  align-self: center;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(2, 1fr); /* Reparte los elementos en 2 columnas */
+  gap: 16px 28px; /* Separa los elementos vertical y horizontal con el mismo espacio */
 }
 
-.toLogin {
-    cursor: pointer; /* Permite que sea clickeable */
-    color: #5fc7cb;
+.input-icon-name {
+  width: 18px;
+  height: 18px;
+}
+
+.input-icon-rut {
+  transform: translateY(1px);
+  width: 16px;
+  height: 16px;
+}
+
+.input-icon-email {
+  transform: translateY(1px);
+  width: 15px;
+  height: 15px;
+}
+
+.input-icon-phone {
+  width: 15px;
+  height: 15px;
+}
+
+.input-icon-date {
+  width: 15px;
+  height: 15px;
+}
+
+.button {
+  align-self: center;
+  width: 70%;
+  height: 30px;
 }

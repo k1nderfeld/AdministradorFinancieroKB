@@ -7,7 +7,11 @@ export default function App() {
       <Toaster />
       <main className="page"> 
         <section className="global-container">
-          <AuthRoutes />
+          <div className="container-decoration">
+            <div className="global-content">
+              <AuthRoutes />
+            </div>
+          </div>
         </section>
       </main>  
     </>
