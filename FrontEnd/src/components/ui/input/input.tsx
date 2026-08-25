@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import Icon from "./icon";
+import Icon from "../icon";
 import "./input.css"
 
 interface InputProps {

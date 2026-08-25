@@ -4,7 +4,14 @@ import AuthRoutes from "./routes/authRoutes";
 export default function App() {
   return (
     <>
-      <Toaster />
+      <Toaster 
+        richColors 
+        position="top-center" 
+        toastOptions={{
+          className: "toast-tittle"
+        }} 
+      />
+
       <main className="page"> 
         <section className="global-container">
           <div className="container-decoration">

@@ -6,8 +6,8 @@ import { Link, useNavigate } from "react-router-dom";
 import handleRegister from "../../../services/User/registerService.js";
 import handleApiError from "../../../utils/handleApiError.js";
 import type { RegisterUserRequest } from "../../../interfaces/Auth/register.js";
-import Button from "../../../components/ui/button.js";
-import Input from "../../../components/ui/input.js";
+import Button from "../../../components/ui/button/button.js";
+import Input from "../../../components/ui/input/input.js";
 
 export default function Register() {
     // método de navegación entre páginas
@@ -54,7 +54,7 @@ export default function Register() {
     return (
         <section className="register">
             <h1>
-                Create Account
+                Create an Account
             </h1>
             {/* Form */} 
             <form className="register-form" onSubmit={handleSubmit}>

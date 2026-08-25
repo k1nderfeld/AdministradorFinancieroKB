@@ -44,11 +44,36 @@ button {
   background-color: #afe3e5;
   border-radius: 14px;
   border: 1px solid #afe3e5;
+  transition: filter 0.4s ease-in-out; /* Suavizado al cambiar de color dsp de pasar el cursor encima */
+}
+
+button:hover {
+  filter: brightness(0.9); /* oscurece el boton aprox 10% al pasar el cursor encima */
+}
+
+button:active {
+  transform: scale(0.97); /* El botón se achica ligeramente al presionarlo*/
 }
 
 a {
   text-decoration: none;
-  color: #5fc7cb
+  color: #5fc7cb;
+  transition: filter 0.4s ease-in-out;
+}
+
+a:hover {
+  filter: brightness(0.8);
+}
+
+.toast-tittle {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 12px !important
+}
+
+.toast-tittle [data-content] {
+  flex: none !important;
 }
 
 .page {
@@ -59,7 +84,7 @@ a {
 }
 
 .global-container {
-  width: 75%;
+  width: 50%;
   min-height: 80vh; /* Minimo altura 80% de la pantalla */
   margin: 40px auto;
   background-color: white;
@@ -70,7 +95,7 @@ a {
 
 .container-decoration {
   width: 100%;
-  height: 200px;
+  height: 220px;
   /* Degradado hacia abajo */
   background: linear-gradient(
     to bottom,
@@ -80,5 +105,5 @@ a {
 }
 
 .global-content {
-  padding: 30px;
+  padding: 50px;
 }
